@@ -93,7 +93,7 @@ const SingleOrder:React.FC<SingleOrderProps> = (props:SingleOrderProps) => {
             </Grid>
             <Grid xs={6} item>
               {order.partsCompleted?.map((p:any) => {
-                return (<h4 key={p}>p</h4>);
+                return (<h4 key={p}>{p}</h4>);
               })}
             </Grid>
       </Grid>}
@@ -103,6 +103,49 @@ const SingleOrder:React.FC<SingleOrderProps> = (props:SingleOrderProps) => {
             </Grid>
             <Grid xs={6} item>
               <h4>{order.state}</h4>
+            </Grid>
+      </Grid>}
+      {order?.artificers && <Grid style={{ borderBottomColor: 'black', borderBottomWidth: '2px', borderBottomStyle: 'double' }}container spacing={3}>
+            <Grid xs={3} justifyContent='flex-start' item>
+              <h4 style={{ textAlign: 'start' }}>Parts Artificers Info</h4>
+            </Grid>
+            <Grid xs={9} item>
+              {
+                order?.artificers.map((a:any) => {
+                  return (
+                    <Grid key={a._id} style={{ borderBottomColor: 'black', borderBottomWidth: '2px', borderBottomStyle: 'double' }}container spacing={3}>
+                                        <Grid xs={6} justifyContent='flex-start' item>
+                                          <h4 style={{ textAlign: 'start' }}>part</h4>
+                                          <h4 style={{ textAlign: 'start' }}>Artificer</h4>
+                                          <h4 style={{ textAlign: 'start' }}>Notes</h4>
+                                        </Grid>
+                                        <Grid xs={6} item>
+                                          <h5>{a.part}</h5>
+                                          <h5>{a.artificer.name}</h5>
+                                          {
+                                            a.notes?.map((n:any) => {
+                                              return (<Grid key={n._id} style={{ borderBottomColor: 'black', borderBottomWidth: '2px', borderBottomStyle: 'double' }}container spacing={3}>
+                                                            <Grid xs={6} justifyContent='flex-start' item>
+                                                              <h4 style={{ textAlign: 'start' }}>message</h4>
+                                                              <h4 style={{ textAlign: 'start' }}>description</h4>
+                                                              <h4 style={{ textAlign: 'start' }}>image</h4>
+                                                            </Grid>
+                                                            <Grid xs={6} item>
+                                                              <div key={n._id}>
+                                                                <p>{n.message}</p>
+                                                                <p>{n.description}</p>
+                                                                <img src={n.image} alt={n.image}></img>
+                                                              </div>
+                                                            </Grid>
+                                                      </Grid>
+                                              );
+                                            })
+                                          }
+                                        </Grid>
+                                  </Grid>
+                  );
+                })
+              }
             </Grid>
       </Grid>}
     </div>

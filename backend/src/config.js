@@ -8,12 +8,11 @@ const dev = {
   db: {
     host: '127.0.0.1',
     port: 27017,
-    name: 'database',
-    user: 'farazshah2001',
-    password: 'Lumbarjack35'
+    name: '',
+    user: '',
+    password: ''
   }
 };
-// mongodb+srv://farazshah2001:<password>@cluster0.xdgnc.mongodb.net/database?retryWrites=true&w=majority
 const test = {
   env: 'test',
   app: {

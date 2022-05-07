@@ -33,7 +33,7 @@ const readOrders = () => {
 
 const readOrdersById = (id) => {
   return new Promise((resolve, reject) => {
-    Order.findById(id).populate('customer').populate('watch')
+    Order.findById(id).populate('customer').populate('watch').populate({path:'artificers',populate:{path:'artificer'}})
       .then((documents) => {
         resolve(documents);
       })
