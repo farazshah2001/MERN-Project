@@ -31,9 +31,9 @@ const createWatchOrder = async (reqBody) => {
 
   const getArtificer = async (expertise) => {
     const artfs = await Artificer.find({ expertise: expertise });
-    if (artfs.length == 0) {
+    if (artfs.length === 0) {
       return null;
-    } else if (artfs.length == 1) {
+    } else if (artfs.length === 1) {
       return artfs[0];
     } else if (artfs.length > 1) {
       return artfs[Math.random(0, artfs.length - 1)];
@@ -93,9 +93,9 @@ const readWatchesById = (id) => {
 // };
 
 // const isStateChangeAllowed = (from, to) => {
-//   if (from === watchState.OPEN && to === watchState.IN_PROGRESS) return true;
-//   if (from === watchState.IN_PROGRESS && to === watchState.RESOLVED) return true;
-//   if (from === watchState.RESOLVED && [watchState.IN_PROGRESS, watchState.CLOSED].includes(to)) return true;
+//   if (from ==== watchState.OPEN && to ==== watchState.IN_PROGRESS) return true;
+//   if (from ==== watchState.IN_PROGRESS && to ==== watchState.RESOLVED) return true;
+//   if (from ==== watchState.RESOLVED && [watchState.IN_PROGRESS, watchState.CLOSED].includes(to)) return true;
 //   return false;
 // };
 

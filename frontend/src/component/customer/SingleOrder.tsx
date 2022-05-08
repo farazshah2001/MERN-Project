@@ -37,10 +37,12 @@ const SingleOrder:React.FC<SingleOrderProps> = (props:SingleOrderProps) => {
             <Grid xs={6} justifyContent='flex-start' item>
               <h4 style={{ textAlign: 'start' }}>title</h4>
               <h4 style={{ textAlign: 'start' }}>description</h4>
+              <h4 style={{ textAlign: 'start' }}>Image</h4>
             </Grid>
             <Grid xs={6} item>
               <h4 style={{ textAlign: 'start' }}>{order.watch?.case?.title}</h4>
               <h4 style={{ textAlign: 'start' }}>{order.watch?.case?.description}</h4>
+              <img src={order.watch?.case?.image} alt={order.watch?.case?.image}></img>
             </Grid>
       </Grid>}
       <h2>Hands</h2>
@@ -48,10 +50,12 @@ const SingleOrder:React.FC<SingleOrderProps> = (props:SingleOrderProps) => {
             <Grid xs={6} justifyContent='flex-start' item>
               <h4 style={{ textAlign: 'start' }}>title</h4>
               <h4 style={{ textAlign: 'start' }}>description</h4>
+              <h4 style={{ textAlign: 'start' }}>Image</h4>
             </Grid>
             <Grid xs={6} item>
               <h4 style={{ textAlign: 'start' }}>{order.watch?.hands?.title}</h4>
               <h4 style={{ textAlign: 'start' }}>{order.watch?.hands?.description}</h4>
+              <img src={order.watch?.hands?.image} alt={order.watch?.hands?.image}></img>
             </Grid>
       </Grid>}
       <h2>Dial</h2>
@@ -59,10 +63,12 @@ const SingleOrder:React.FC<SingleOrderProps> = (props:SingleOrderProps) => {
             <Grid xs={6} justifyContent='flex-start' item>
               <h4 style={{ textAlign: 'start' }}>title</h4>
               <h4 style={{ textAlign: 'start' }}>description</h4>
+              <h4 style={{ textAlign: 'start' }}>Image</h4>
             </Grid>
             <Grid xs={6} item>
               <h4 style={{ textAlign: 'start' }}>{order.watch?.dial?.title}</h4>
               <h4 style={{ textAlign: 'start' }}>{order.watch?.dial?.description}</h4>
+              <img src={order.watch?.dial?.image} alt={order.watch?.dial?.image}></img>
             </Grid>
       </Grid>}
       <h2>Crystal</h2>
@@ -70,10 +76,12 @@ const SingleOrder:React.FC<SingleOrderProps> = (props:SingleOrderProps) => {
             <Grid xs={6} justifyContent='flex-start' item>
               <h4 style={{ textAlign: 'start' }}>title</h4>
               <h4 style={{ textAlign: 'start' }}>description</h4>
+              <h4 style={{ textAlign: 'start' }}>Image</h4>
             </Grid>
             <Grid xs={6} item>
               <h4 style={{ textAlign: 'start' }}>{order.watch?.crystal?.title}</h4>
               <h4 style={{ textAlign: 'start' }}>{order.watch?.crystal?.description}</h4>
+              <img src={order.watch?.crystal?.image} alt={order.watch?.crystal?.image}></img>
             </Grid>
       </Grid>}
       <h2>Crown</h2>
@@ -81,10 +89,12 @@ const SingleOrder:React.FC<SingleOrderProps> = (props:SingleOrderProps) => {
             <Grid xs={6} justifyContent='flex-start' item>
               <h4 style={{ textAlign: 'start' }}>title</h4>
               <h4 style={{ textAlign: 'start' }}>description</h4>
+              <h4 style={{ textAlign: 'start' }}>Image</h4>
             </Grid>
             <Grid xs={6} item>
               <h3 style={{ textAlign: 'start' }}>{order.watch?.crown?.title}</h3>
               <h3 style={{ textAlign: 'start' }}>{order.watch?.crown?.description}</h3>
+              <img src={order.watch?.crown?.image} alt={order.watch?.crown?.image}></img>
             </Grid>
       </Grid>}
       {order?.partsCompleted?.[0] && <Grid style={{ borderBottomColor: 'black', borderBottomWidth: '2px', borderBottomStyle: 'double' }}container spacing={3}>
